@@ -1,0 +1,57 @@
+h1 {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Arial';
+}
+
+body {
+    margin: 20px;
+    font-family: 'Arial';
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+#tab-random {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    background-color: #aab7ca;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* BUTTON  RANDOM TWEET */
+.random-button {
+    position: fixed;
+    margin-top: 40px;
+    margin-left: 10px;
+    padding: 20px 30px;
+    background-color: #a5b7ca;
+    font-weight: bold;
+    color: rgb(16, 15, 15);
+    border-radius: 4px #1b1a1a;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.random-button:hover {
+    background-color: #939faa;
+    
+}

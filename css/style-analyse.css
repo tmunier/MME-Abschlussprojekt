@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Arial';
+}
+
+body {
+    margin: 20px;
+    font-family: 'Arial';
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+#tab-analyse {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    background-color: #aab7ca;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+

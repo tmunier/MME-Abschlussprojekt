@@ -1,0 +1,89 @@
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Arial';
+}
+
+body {
+    margin: 20px;
+    font-family: 'Arial';
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#tab-suche {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    background-color: #aab7ca;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+/*FILTER*/
+
+.filter {
+    padding: 10px;
+}
+
+.filterOption {
+    margin-left: 10px;
+    padding: 15px;
+}
+
+label {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.input-container {
+    /*negative Zahl, damit label und input auf gleicher Höhe sind */
+    margin-top: -25px;
+    margin-left: 127px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* BUTTON SUCHE STARTEN */
+.search-button {
+    position: fixed;
+    bottom: 40px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #a5b7ca;
+    font-weight: bold;
+    color: rgb(16, 15, 15);
+    border-radius: 4px #1b1a1a;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-button:hover {
+    background-color: #939faa;
+}
