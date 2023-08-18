@@ -1,7 +1,34 @@
+.image-container {
+    position: relative; /* Container-Positionierung für die absolute Position des Texts */
+    text-align: center; /* Zentriert den Text horizontal */
+}
+
+#titelbild {
+    width: 100%;
+    height: auto;
+
+}
+
+#titelbild-text {
+    position: absolute; /* Absolut positionierter Text innerhalb des Containers */
+    bottom: 15px; /* Abstand vom unteren Rand des Containers */
+    left: 50%; /* Text wird horizontal zentriert */
+    transform: translateX(-50%); /* Um das Zentrum korrekt auszurichten */
+    background-color: rgba(255, 255, 255, 0.9); /* Hintergrundfarbe für den Text */
+    padding: 5px; /* Innenabstand für den Text */
+    color: rgb(10, 10, 7);
+}
+
 h1 {
     text-align: center;
-    margin: 20px;
+    font-size: 35px;
+    font-weight: bold;
     font-family: 'Arial';
+}
+
+.info {
+    text-align: center;
+    padding: 40px;
 }
 
 body {
@@ -23,8 +50,26 @@ body {
     transition: background-color 0.3s ease-in-out;
 }
 
-.tab:hover {
-    background-color: #ddd;
+#tab-suche {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#tab-analyse {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    background-color: #ff0000;
+    color:white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
 #tab-random {
@@ -32,9 +77,21 @@ body {
     text-align: center;
     padding: 10px;
     border: 2px solid #ccc;
-    background-color: #aab7ca;
+    background-color: #fffb00;
+    /*Eigentlich ist die Schriftfarbe der Tabs weiß, allerdings ist diese Farbe zusammen mit einem gelben Hintergrund ungünstig.
+    Zudem gibt es zwischen dem Tab Suche und Analyse mehr Zusammenhang, da es in diesen um gefilterte Daten handelt,
+    beim Tab Random Tweets hingegen handelt es sich um zufällig gewählte Daten bzw. Tweets, sodass dieser im Grunde genommen eine
+    andere Funktion bietet, weshalb deswegen in dem Design unterschieden werden kann*/
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+}
+
+#tab-suche:hover {
+    background-color: #00000082;
+}
+
+#tab-analyse:hover {
+    background-color: #ff00009a;
 }
 
 /* BUTTON  RANDOM TWEET */
