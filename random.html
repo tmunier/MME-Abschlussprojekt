@@ -21,6 +21,7 @@
 
     <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://www.gstatic.com/charts/loader.js"></script>-->
+    <!--d3js-->
 
 </head>
 <body>
@@ -37,12 +38,21 @@
         </div>
 
         <button class="random-button">Zeige mir einen zufälligen Tweet</button>
-
-        <div class="container">
-            <div id="stacked-bar-chart"></div>
+        <br>
+        <div id="tweet-container" class="container">
+            <img id="tweet-image" src="" class="img" alt="A random tweet">
+        </div>
+        <br>
+        <div id="tweet-info">
+            <div id="politiker">Politiker: </div>
+            <div id="partei">Partei: </div>
+            <div id="datum">Datum: </div>
+            <div id="text">Text: </div>
+            <div id="sentiment">Sentiment: </div>
+            <div id="link">Link zum Tweet: </div>
         </div>
 
-        <script language="javascript" type="text/javascript" src="js/movies-data.js"></script>
+        <script language="javascript" type="text/javascript" src="js/politicians-tweets.js"></script>
         <script language="javascript" type="text/javascript" src="js/App.js"></script>
         <script language="javascript" type="text/javascript" src="js/Model.js"></script>
         <script language="javascript" type="text/javascript" src="js/View.js"></script>
