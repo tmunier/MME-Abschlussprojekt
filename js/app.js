@@ -1,3 +1,10 @@
+let App = {
+    init: function(){
+        console.log("app")
+        App.Controller().init()
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const tabs = document.querySelectorAll(".tab");
 
