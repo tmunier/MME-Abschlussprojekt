@@ -12,7 +12,7 @@ App.Controller = function(){
     }
 
     let initListener = function(){
-        $(document).on("searchButtonClicked", handlesearchButtonClicked)
+        $(document).on("searchStarted", handleSearchStarted)
     }
 
     let continueInit = function(results, status, xhr){
@@ -29,8 +29,8 @@ App.Controller = function(){
         })
     }
 
-    let handlesearchButtonClicked = function(){
-        console.log("search button")
+    let handleSearchStarted = function(event, stichwort, politiker, partei, start, end, sentiment){
+        console.log(stichwort, politiker, partei, start, end, sentiment)
     }
 
     that.init = init

@@ -18,6 +18,8 @@ App.View = function(){
         let sentiment = $("#sentiment").val()
 
         console.log(stichwort, politiker, partei, start, end, sentiment)
+
+        $(document).trigger("searchStarted", [stichwort, politiker, partei, start, end, sentiment])
     }
 
 
