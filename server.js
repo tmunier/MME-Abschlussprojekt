@@ -36,9 +36,56 @@ app.get("/sentiment_filter", function(req, res){
     res.json(filteredTweets)
 })
 
+app.get("/politician_filter", function(req, res){
+    let politicians = req.query.politicians
+
+    let filteredTweets = tweets.filter(function(tweet){
+        let isPolitician = false
+        for(politician of politicians){
+            if(tweet.UserScreenName.includes(politician)){
+                isPolitician = true
+                break
+            }
+        }
+        return isPolitician
+    })
+    res.json(filteredTweets)
+})
+
+app.get("/party_filter", function(req, res){
+    let parties = req.query.parties
+
+    let filteredTweets = tweets.filter(function(tweet){
+        let isParty = false
+        for(party of parties){
+            if(tweet.Partei.includes(party)){
+                isParty = true
+                break
+            }
+        }
+        return isParty
+    })
+    res.json(filteredTweets)
+})
+
+app.get("/keyword_filter", function(req, res){
+    let keywords = req.query.keywords
+
+    let filteredTweets = tweets.filter(function(tweet){
+        let isKeyword = false
+        for(keyword of keywords){
+            if(tweet.Embedded_text.includes(keyword)){
+                isKeyword = true
+                break
+            }
+        }
+        return isKeyword
+    })
+    res.json(filteredTweets)
+})
 
 app.listen(3000, () => {
-    console.log(`Example app listening on port 3000`)
+    console.log(`Listening on port 3000`)
   }) 
 // server running at https://localhost:3000
 // server running at https://127.0.0.1:3000

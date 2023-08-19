@@ -4,27 +4,33 @@ App.Controller = function(){
 
     let init = function(){
         console.log("controller")
+
         model = App.Model()
         view = App.View()
 
         getNeutralTweets()
     }
 
+    let initListener = function(){
+        $(document).on("searchButtonClicked", handlesearchButtonClicked)
+    }
+
     let continueInit = function(results, status, xhr){
-        console.log(results)
-        model.init()
+        initListener()
+        model.init(results)
         view.init()
     }
 
     let getNeutralTweets = function(){
         $.ajax({
-            url: "http://localhost:3000/sentiment_filter",
+            url: "http://localhost:3000/tweets",
             type: "GET",
-            data: {
-                sentiments:[1]
-            },
             success: continueInit
         })
+    }
+
+    let handlesearchButtonClicked = function(){
+        console.log("search button")
     }
 
     that.init = init

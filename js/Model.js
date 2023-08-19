@@ -1,9 +1,11 @@
 App.Model = function(){
-    
-    let that = {}
 
-    let init = function(){
-        console.log("model")
+    let that = {}
+    let tweets = []
+
+    let init = function(tweetsData){
+        console.log("model", tweetsData[0])
+        tweets = tweetsData
     }
 
     that.init = init
