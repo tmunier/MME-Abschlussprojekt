@@ -22,9 +22,14 @@ App.View = function(){
         $(document).trigger("searchStarted", [stichwort, politiker, partei, start, end, sentiment])
     }
 
+    let displaySearchResults = function(tweets){
+        console.log("display search results", tweets)
+    }
+
 
 
     that.init = init
+    that.displaySearchResults = displaySearchResults
 
     return that
 }

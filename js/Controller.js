@@ -31,6 +31,9 @@ App.Controller = function(){
 
     let handleSearchStarted = function(event, stichwort, politiker, partei, start, end, sentiment){
         console.log(stichwort, politiker, partei, start, end, sentiment)
+        searchResults = model.getSearchResults(stichwort, politiker, partei, start, end, sentiment)
+        console.log("search results", searchResults)
+        view.displaySearchResults(searchResults)
     }
 
     that.init = init
