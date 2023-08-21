@@ -98,7 +98,7 @@ body {
 }
 
 /* BUTTON  RANDOM TWEET */
-.random-button {
+.button {
     margin-top: 20px;
     padding: 20px 30px;
     background-color: #a5b7ca;
@@ -109,7 +109,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.random-button:hover {
+.button:hover {
     background-color: #939faa;
     
 }

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Twitter Sentiment-Analyse - Random Tweets</title>
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- Css -->
     <link href="css/style-random.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -15,17 +17,21 @@
     <!-- Tooltipster -->
     <link href="css/tooltipster.css" rel="stylesheet">
     <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script language="javascript" type="text/javascript" src="js/libs/jquery.tooltipster.js"></script>
+    <!-- <script language="javascript" type="text/javascript" src="js/libs/jquery.tooltipster.js"></script> -->
 
     <!-- PapaParse -->
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
     <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://www.gstatic.com/charts/loader.js"></script>-->
     <!--d3js-->
+    <!-- Twitter tweet -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </head>
+
 <body>
     <div class="container">
 
@@ -35,7 +41,7 @@
                 <h1 id="heading" title="test">TWITTER SENTIMENT ANALYSE</h1>
             </div>
         </div>
-    
+
         <div class="tabs">
             <div class="tab" id="tab-suche">Suche</div>
             <div class="tab" id="tab-analyse">Analyse</div>
@@ -48,12 +54,12 @@
             Unten können Sie sich einen zufälligen Tweet ausgeben lassen.
         </div>
 
-        <button class="random-button">Zeige mir einen zufälligen Tweet</button>
+        <button id="random-button" class="button">Zeige mir einen zufälligen Tweet</button>
         <br>
-        <div id="tweet-container" class="container">
-            <img id="tweet-image" src="" class="img" alt="A random tweet">
-        </div>
-        <br>
+
+
+
+
         <div id="tweet-info">
             <div id="politiker">Politiker: </div>
             <div id="partei">Partei: </div>
@@ -75,6 +81,7 @@
                         download: true,
                         header: true,
                         skipEmptyLines: true,
+                        dynamicTyping: true,
                         complete: function(results){
                             console.log(results);
                         }
@@ -82,17 +89,29 @@
             });
         </script> -->
 
-        <script language="javascript" type="text/javascript" src="js/politicians-tweets.js"></script>
+        <!-- Twitter-Tweet -->
+        <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">Im Herbst wird gewählt.\nSchluss mit den Rechtsbrüchen der Regierung.\nbild.de\nPrüfungen im Gesundheitsministerium - Rechnungshof hat Spahns Masken-Deals im Visier\nGratis-FFP2-Masken in Apotheken gegen Vorlage eines Coupons: Die Verteil-Aktion von Gesundheitsminister Jens Spahn kostete Millionen! Aber wurden bei den Maskendeals riesige Summen an Steuergeldern...\n10\n20\n112</p>
+            <a href="https://twitter.com/AfDBerlin/status/1375709283850063876"></a>
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">Im Herbst wird gewählt.\nSchluss mit den Rechtsbrüchen der Regierung.\nbild.de\nPrüfungen im Gesundheitsministerium - Rechnungshof hat Spahns Masken-Deals im Visier\nGratis-FFP2-Masken in Apotheken gegen Vorlage eines Coupons: Die Verteil-Aktion von Gesundheitsminister Jens Spahn kostete Millionen! Aber wurden bei den Maskendeals riesige Summen an Steuergeldern...\n10\n20\n112</p>
+            <a href="https://twitter.com/AfDBerlin/status/1375709283850063876"></a>
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        <script language="javascript" type="text/javascript" src="js/tweets_data.json"></script>
         <script language="javascript" type="text/javascript" src="js/App.js"></script>
-        <script language="javascript" type="text/javascript" src="js/Model.js"></script>
-        <script language="javascript" type="text/javascript" src="js/View.js"></script>
-        <script language="javascript" type="text/javascript" src="js/Controller.js"></script>
+        <script language="javascript" type="text/javascript" src="js/random.js"></script>
+        <script language="javascript" type="text/javascript" src="js/tweet-objects.js"></script>
 
         <script>
             window.onload = function(){
                     App.init()
             }
         </script>
-        
+
     </div>
 </body>
