@@ -1,5 +1,6 @@
 .container{
     text-align: center;
+}
 .image-container {
     position: relative; /* Container-Positionierung für die absolute Position des Texts */
     text-align: center; /* Zentriert den Text horizontal */
