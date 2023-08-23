@@ -15,4 +15,8 @@ class Tweet {
         this.partei = partei
         this.sentiment = sentiment
     }
+
+    getTableRow(){
+        let 
+    }
 }
