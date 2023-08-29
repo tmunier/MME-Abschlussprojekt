@@ -20,6 +20,12 @@ app.get("/tweets", function(req, res){
     res.json(tweets)
 })
 
+app.get("/random_tweet", function(req, res){
+    rndIdx = Math.floor(Math.random() * tweets.length)
+    randomTweet = tweets[rndIdx]
+    res.json(randomTweet)
+})
+
 app.get("/sentiment_filter", function(req, res){
     let sentiments = req.query.sentiments
 

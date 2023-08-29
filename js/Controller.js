@@ -8,7 +8,7 @@ App.Controller = function(){
         model = App.Model()
         view = App.View()
 
-        getNeutralTweets()
+        getTweets()
     }
 
     let initListener = function(){
@@ -21,7 +21,7 @@ App.Controller = function(){
         view.init()
     }
 
-    let getNeutralTweets = function(){
+    let getTweets = function(){
         $.ajax({
             url: "http://localhost:3000/tweets",
             type: "GET",
